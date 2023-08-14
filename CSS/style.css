@@ -112,7 +112,7 @@ address {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
     padding-bottom: 32px;
     position: relative;
 }
@@ -167,7 +167,7 @@ address {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .menu-list-contact:hover,
@@ -191,13 +191,14 @@ address {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.20);
+    z-index: 1;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal-wrapper {
@@ -210,8 +211,16 @@ address {
     border-radius: 4px;
     background: var(--white-color);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.backdrop:not(.is-hidden) .modal-wrapper {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
 .modal-btn {
     position: absolute;
     top: 8px;
@@ -296,7 +305,7 @@ address {
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .order-button:active,
@@ -344,7 +353,7 @@ address {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .about-li-icon:hover,
@@ -521,7 +530,7 @@ address {
     transition-property: background;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .social-link:hover,
@@ -533,7 +542,7 @@ address {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .social-link:hover .social-icon,
@@ -568,7 +577,7 @@ address {
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .customer-link:hover,
@@ -580,7 +589,7 @@ address {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .customer-link:hover .customer-icon,
@@ -626,7 +635,7 @@ address {
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 
 }
 
@@ -648,7 +657,7 @@ address {
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .overlay-text {
@@ -694,7 +703,7 @@ address {
     transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .order-button-portfolio:active,
@@ -787,7 +796,7 @@ address {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .fotter-links {
@@ -810,7 +819,7 @@ address {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .footter-address-white:hover,
@@ -855,7 +864,7 @@ address {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+
 }
 
 .social-icon-footer {
