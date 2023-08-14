@@ -199,8 +199,8 @@ address {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
+}   
+ 
 .modal-wrapper {
     position: absolute;
     top: 50%;
